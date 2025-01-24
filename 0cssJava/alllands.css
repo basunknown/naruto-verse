@@ -1,0 +1,891 @@
+::-webkit-scrollbar{
+    background-color: rgba(216, 213, 213, 0.74);
+    border-radius: 18px;
+    box-shadow:0px 0px 4px black;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+  
+  
+  }
+   
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(90, 89, 89, 0.842);
+    border-radius: 6px;
+  
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5f5f5f; 
+  }
+
+
+  .filteroverlay{
+     position: fixed;
+     background-color: rgba(0, 0, 0, 0.822);
+     top:0px;
+     right:0px;
+     width:100vw;
+     height: 100vh;
+     z-index: 45;
+     pointer-events: none;
+     display: none
+ }
+
+        html,body {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+
+            
+            
+            }
+
+            body{
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 450 ;
+                background-position: center;
+                scroll-behavior: smooth;
+                user-select: none;
+
+            }
+
+
+@font-face {
+    font-family: chiller;
+    src: url('../font/chiller.ttf');
+    }
+
+    .firstview{
+        height: 110vh;
+        width: 100%;
+        min-height:610px;
+      }
+
+.landmenu
+   {
+    position: relative;
+    display: flex;
+    width:100%;
+    height: 63px;
+    max-height:fit-content;
+    background-color: rgba(255, 255, 255, 0.37);
+    z-index: 6;
+}
+
+
+    
+
+.nameOfLand{
+    position: relative;
+    display: block;
+    margin:auto;
+    left: 2%;
+    font-size:60px;
+    /* font-family:chiller; */
+    font-family: fonttest2;
+    width:fit-content;
+}
+
+.nameOfLandimg{
+    position: relative;
+    top: 4px;
+    left:5%;
+    width: 50px;
+    height: 50px;
+}
+
+.normalvillagelogo{
+    height:50px;
+    margin-top: 5px;
+   }
+   
+   .hotwaterlogo{
+     height:45px;
+     width: 65px;
+     margin-top: 5px;
+   }
+   
+   .rainlogo{
+       height:50px;
+      }
+   
+   .grasslogo{
+     height:50px;
+   }
+   
+   .mistlogo{
+     height:48px;
+     margin-top: 5px;
+   }
+   
+   .villageslogo{
+     height:50px;
+     margin-top: 5px;
+    
+   }
+   
+   .villageslandlogo{
+     height:50px;
+     margin-top: 5px;
+    
+   }
+   
+   .landlogo{
+     height:50px; 
+     margin-top: 5px;
+   }
+
+.LobjectFrame{
+    /* background-color: #c25959; */
+    position: absolute;
+    top: 12px;
+    margin-left:68%;
+    width:204px;
+    height: 300px;
+      /* background-color: aliceblue;  */
+}
+
+.map{
+    float: right;
+    height:63px;
+    
+}   
+
+
+.iframeCover{
+    position:absolute; 
+    width:345px; 
+    height:63px; 
+    /* background-color: aliceblue;  */
+    top:0; 
+    margin-left:68%;
+    z-index: 6;
+    display:none;
+
+}
+
+.smallsizesearch{
+    display: none;
+    margin: auto;
+    width: 234px;
+    height:50px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+
+/* .smallsizesearch:hover iframe{
+height: 234px;
+} */
+
+
+.smallsizesearch iframe{
+    margin: auto;
+    display: block;
+    margin-top: 9px;
+    width:204px;
+    height: 300px;
+    /* background-color: black; */
+
+
+}
+
+#searcherror{
+    background-color: aliceblue;
+    box-shadow: 0px 0px 8px;
+position: absolute;
+display: none;
+height: 200px;
+width:55%;
+top:150px;
+left: 0px;
+right:0px;
+ z-index: 1; 
+ margin:auto;
+ text-align: center;
+ line-height: 34px;
+ justify-content: center;
+
+}
+
+#negativedisplay, #errormessage, #negativedisplayConfirmed{
+    height: 10px;
+    transform: translateY(25px);
+}
+
+
+/* list of character to be displayed */
+
+.characterdisplay{
+    position:absolute;
+    height:1240px;
+    right:0px;
+    top:0px; 
+    /* background-color: black; */
+    width: fit-content; 
+}
+
+#characterlistAOcontainer{
+  position: sticky;
+  top:75px;
+      z-index:82;
+  cursor:pointer;
+  background-color: rgba(107, 107, 103, 0);
+  background-image: url("../land/iconcharacter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border:none;
+  width: 75px;
+  height: 85px;
+  /* float: right; */
+}
+
+/* .characterlistO{
+
+} */
+
+
+.characterposition{
+  position: fixed;
+  background-color: #960a0a;
+  top:0px;
+  right:0px;
+  height: 100%;
+  z-index: 85;
+  transform:translateX(104%);
+  display: none;
+
+}
+
+
+
+.landmem{
+  /* background-color: #5f5f5f; */
+
+  width:418px;
+  min-height: 80px;
+  height:100%;
+  z-index: 85;
+
+  /* transition: 0.01s; */
+  /* animation-duration: 2s; */
+}
+
+
+
+.characterlistA{
+  top:85px; 
+  position:fixed;
+  z-index: 1; 
+  right: 22px; 
+  font-family:serif; 
+  text-decoration: none; 
+  color:yellow;
+  width:40px; 
+  height: 35px;
+  text-align: center;  
+  border-radius: 50%; 
+  opacity:50%; 
+  background-color: red;
+}
+
+.characterlistA:hover{
+  transition-duration:0.21s;
+  cursor:pointer;
+  opacity: 100%;
+}
+
+
+.titlecharacterlist{
+  position: fixed;
+  background-color:white;
+  color:darkblue;
+  display: flex;
+  
+  border:0px;
+  box-shadow:0px 0px 4px black;
+  height:50px;
+  width:100%;
+  z-index: 2;
+}
+
+.titlecharacterlist h3{
+    margin: auto;
+    font-family: fonttest9;
+    font-size: 18px;
+
+}
+
+/* .titlecharacterlist::-webkit-scrollbar-track{
+ height: 15px;
+} */
+
+
+.listofcharacterwrap{
+  box-shadow:0px 0px 4px black;
+  background-color: aliceblue;
+  height:100%;
+  overflow: auto;
+  width:418px;
+  position:relative;
+  display: block;
+
+  /* transform:translateX(104%);
+  display: none; */
+
+}
+
+.listofcharacterwrap::-webkit-scrollbar-track {
+  box-shadow: inset 0px 0px 2px rgb(0, 0, 0);
+}
+
+.listofcharacterwrap::-webkit-scrollbar{
+  box-shadow:initial 0px 0px 0px black;
+}
+
+.listofcharacterwrap::-webkit-scrollbar-track-piece{ 
+  margin-top: 50px;
+}
+
+
+.link{
+  display: flex;
+  box-shadow:0px 0px 4px black;
+  height:150px;
+width:100%;
+
+}
+
+
+.link:hover{
+  background-color: #d1cece;
+}
+
+.ahreStuff{
+  text-decoration:none;
+  cursor: context-menu;
+  /* pointer-events: none; */
+}
+
+
+.imageId{
+  width:200px;
+  height: 150px;
+  display: block;
+}
+
+
+.characternames{
+  display:flex;
+  width:100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #5f5f5f; */
+  padding-left: 8px;
+  font-family: fonttest11;
+
+}
+
+.characternames p{
+  font-size: 18px;
+}
+
+/* first page */
+
+.firstpage{
+/* background-color: #5f5f5f; */
+    position: relative;
+    display: flex;
+    width: 100%;
+    height:100vh;
+    min-height: 650px;
+    justify-content: center;
+}
+
+.firstpage1{
+    /* background-color: #5f5f5f; */
+    /* position: relative; */
+    display:flex;
+    width: 100%;
+    height:100%;
+    min-height: 650px;
+    /* min-height: 700px; */
+    justify-content: center;
+}
+
+
+
+.introinfo{
+    position:relative;
+    box-shadow:2px 2px 8px;
+    background-color:rgba(0, 0, 0, 0.726);
+    margin:auto;
+    padding: 20px;
+    top:-7%;
+    height:fit-content;
+    width:525px;
+    z-index: 0;
+}
+.introinfoP{
+
+    /* mask-image: linear-gradient(to bottom, transparent 0%, black 48px, black calc(100% - 48px), transparent 100%); */
+
+
+
+    max-height: 332px;
+    height:fit-content;
+    text-align:left;
+    font-size: 160%;
+    font-family:fonttest21;
+    overflow: auto;
+    /* background-color: #5f5f5f; */
+    z-index: 0;
+    
+
+}
+
+.introinfoP::-webkit-scrollbar{
+/* opacity: 0px; */
+background-color: rgba(185, 85, 85, 0);
+width: 4px;
+}
+
+.introinfoP::-webkit-scrollbar-thumb{
+    background-color: rgb(221, 38, 38);
+}
+
+/* second page */
+
+.needed{
+display: none;
+}
+
+.secondpage{
+    position:static;
+    display:flex;
+    width:100%;
+    min-height: 650px;
+    height:105vh;
+background-position: center;
+background-position-y:0px;
+background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.hiddenvillagewrap{
+    position:relative;
+    padding: 25px;
+    width:85%;
+    /* height:145px; */
+    height:fit-content;
+    max-height: 342px;
+    min-width:84%;
+margin: auto;
+    top:82px;
+    background-color:rgba(255, 255, 255, 0.534);
+    font-family:fonttest21;
+
+}
+
+.hiddenvillagep{
+    margin: auto;
+    display: block;
+    text-align:left;
+    font-size: 160%;
+    position: relative;
+    max-height: 342px;
+    height: fit-content;
+    overflow: auto;
+}
+
+.hiddenvillagep::-webkit-scrollbar{
+    /* opacity: 0px; */
+    background-color: rgba(185, 85, 85, 0);
+    width: 4px;
+    }
+    
+    .hiddenvillagep::-webkit-scrollbar-thumb{
+        background-color: rgb(221, 38, 38);
+    }
+
+.hiddenvillagep1{
+    margin: auto;
+    display: block;
+    text-align:left;
+    font-size: 27px;
+    position: relative;
+    max-height: 342px;
+    height: fit-content;
+    overflow: auto;
+}
+
+
+
+/* third page */
+.thirdpage{
+    width:100%;
+    height:100%;
+}
+
+.thirdpage1{
+    width:100%;
+    height:100%;
+    background-color:rgb(141, 51, 224);
+}
+
+
+.thirdpageline{
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+
+.thirdpagetitle{
+    position: absolute;
+    color:white;
+    padding-top: 7px;
+    margin-top:-42px;
+    width:fit-content;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+    height:35px;
+    border-radius: 9px;
+    }
+
+.thirdpagetitle p{
+    font-size: 155%;
+    margin-top: -1px;
+    font-family:fonttest9;
+}
+
+
+.clansbutton{
+    border: solid grey 0.1px;
+    background-position:center;
+    background-repeat: no-repeat;
+    float: right;
+    background-size:50px;
+    cursor: pointer;
+    width:70px;
+    height:70px;
+}
+
+.clanbutton{
+    margin:auto;
+    width:70px;
+    height:70px;
+}
+
+
+.landDIV{
+    /* background-color: red; */
+    position:absolute;
+    z-index:1;
+    display: block;
+    margin-top:65px;
+    right:0%;
+}
+
+.landDIV1{
+    position:absolute;
+    z-index:1;
+    left: 50%;
+    margin-top:32px;
+}
+
+.slideimages{
+    background-color: #5f5f5f;
+    position:absolute;
+    width:100%;
+    height:100%;
+    text-align: left;
+    margin:auto;
+    background-size:cover;
+    background-position: 42%;
+}
+
+.slideimagename{
+    margin-top: 275px; position: relative; font-size:35px;
+}
+
+.clanname{
+    cursor: pointer;
+}
+
+.slideimagename span{
+    border-radius:0px 4px 4px 0px;
+     background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    font-size: 142%;
+    font-family:fonttest23;
+    
+}
+
+.handcontainer{
+    position: relative;
+    width:200px;
+    top:310px;
+    height: fit-content;
+    /* background-color: red; */
+    animation:upanddown 0.4s alternate infinite;
+}
+
+.handpointed{
+    margin:auto; 
+    display: block;
+    width:54px; 
+}
+
+@keyframes upanddown{
+
+    to{
+        top:335px;
+    }
+}
+
+
+
+
+.noclan1{
+background-color: rgb(255, 145, 0); position:relative; width:50%; top:25%; height:50%; margin: auto; box-shadow: 1px 1px 8px; text-align: center;
+}
+
+
+@media screen and (max-width: 1090px) {
+
+    .landDIV{
+        display: block;
+        width: 195px;
+        margin-top:30px;
+        right: 0px;
+    }
+ 
+
+
+    @media screen and (max-width: 960px) {
+
+
+        .iframeCover{
+            z-index: 5;
+            height: 80px;
+            width: 100%;
+            top:auto;
+            left:0px; 
+            right:0px;
+            margin-left:auto;
+            margin-right:auto;
+            /* background-color: black; */
+        }
+
+        .smallsizesearch{
+            position: relative;
+            display: flex;
+            z-index: 2;
+        }
+
+
+        .LobjectFrame{
+            z-index: 0;
+            display: none;
+        }
+
+
+
+        @media screen and (max-width: 640px) {
+            
+            .footercontent{
+                width: 100%;
+            }
+        .introinfo{
+            height: 322px;
+            width: 84%;
+        }
+
+        .slideimage{
+            height: fit-content;
+            background-color:rgb(32, 32, 32);
+                /* mask-image: linear-gradient(to bottom, transparent 0%, black 48px, black calc(100% - 48px), transparent 100%); */
+
+
+        }
+
+        .slideimagename span{
+            font-size: 130%;
+        }
+
+        .introinfoP{
+            height: 270px;
+            font-size: 142%;
+           
+        }
+
+        .hiddenvillagewrap{
+            margin-top: 205px;
+            height: 322px;
+            width: 82%;
+        }
+
+        .hiddenvillagep{
+            height: 100%;
+            font-size: 142%;
+        }
+
+
+            @media screen and (max-width: 502px) {
+
+                .footer{
+                    font-size: 14px;
+                    height:fit-content;
+                }
+
+
+                hr{
+                    width: 48%;
+                }
+                .listofcharacterwrap::-webkit-scrollbar{
+                   width: 10px;
+                }
+
+                .characterposition{
+                    width: 100%;
+                }
+
+                .landmem{
+                    width: 100%;
+                }
+
+
+                .listofcharacterwrap{
+                    width:100%;
+                    
+                }
+
+
+                .link{
+                    width: 100%;
+                }
+
+
+                .landDIV{
+                    position:absolute;
+                    display: block;
+                    /* margin-top:65px; */
+                    width: 140px;
+                    right:0%;
+                }
+
+
+
+.link:hover{
+    background-color: #d1cece;
+}
+
+
+
+                .clansbutton{
+                    width:80px;
+                    height:50px;
+                }
+
+
+                .landnamespan{
+                    display: none;
+                }
+                }
+
+               
+
+                .pcontainer{
+                    width:154px;
+                }
+
+           
+                .iframeCover{
+                    right:80px;
+                }
+
+                .hiddenvillagewrap{
+                    top:35px;
+                    /* width:100%; */
+                }
+                /* .hiddenvillagep{
+                    font-size:110%;
+                } */
+
+                .pcontainer{
+                    width:90%;
+
+                }
+
+
+
+                @media screen and (max-width: 210px) {
+                    .introinfo{
+                        padding:5px;
+                        top: 0px;
+                    }
+                    .introinfoP{
+                        font-size:145%;
+                    }
+
+
+                    .slideimagename{
+                        font-size: 20px;
+                    }
+
+                    .introinfoP::after { 
+                        content: ".....";
+                    }
+
+                    .pcontainer{
+                        width:95%;
+                        font-size:50%;
+                    }
+
+
+                    .footercopyright{
+                        font-size:50%;
+                    }
+
+                    .hiddenvillagewrap{
+                        padding:5px;
+                        top:245px;
+                    }
+
+                    /* .hiddenvillagep{
+                        font-size:115%;
+                    } */
+
+                    .introinfospan{
+                        display:none;
+                    }
+
+                    .hiddenvillagespan{
+                        display:none;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+
+a, a:hover,
+a:focus {
+  outline:none;
+  text-decoration: none;
+}

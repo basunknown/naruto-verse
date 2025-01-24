@@ -1,0 +1,125 @@
+@font-face {
+  font-family: fonttest0;
+      src: url('../font/Hakubo.ttf');
+  }
+
+@font-face {
+  font-family: fonttest1;
+    src: url('../font/All Yoko.ttf');
+}
+
+@font-face {
+font-family: fonttest2;
+    src: url('../font/chiller.ttf');
+}
+    
+@font-face {
+font-family: fonttest3;
+    src: url('../font/Fujimaru-Regular.ttf');
+}
+
+@font-face {
+font-family: fonttest4;
+    src: url('../font/HianyLauPersonalUse.ttf');
+}
+
+@font-face {
+font-family: fonttest5;
+    src: url('../font/Hikara.otf');
+}
+
+@font-face {
+font-family: fonttest6;
+    src: url('../font/Karasha.otf');
+}
+
+@font-face {
+font-family: fonttest7;
+    src: url('../font/SAIKYO.ttf');
+}
+    
+@font-face {
+font-family: fonttest8;
+    src: url('../font/SamuraiWarrior.otf');
+}
+
+@font-face {
+font-family: fonttest9;
+    src: url('../font/SEVEMFBR.ttf');
+}
+
+@font-face {
+font-family: fonttest10;
+    src: url('../font/Shenttpuro.otf');
+}
+
+@font-face {
+font-family: fonttest11;
+    src: url('../font/okashi/Okashi-italic.otf');
+}
+
+@font-face {
+font-family: fonttest12;
+    src: url('../font/okashi/Okashi-Regular.otf');
+}
+    
+@font-face {
+font-family: fonttest13;
+    src: url('../font/night in tokyo/NightinTokyo.ttf');
+}
+
+@font-face {
+font-family: fonttest14;
+    src: url('../font/night in tokyo/NightinTokyo-Bold.ttf');
+}
+
+@font-face {
+font-family: fonttest15;
+    src: url('../font/night in tokyo/NightinTokyoShadow.ttf');
+}
+
+@font-face {
+  font-family: fonttest16;
+      src: url('../font/Dirtyboy.ttf');
+  }
+
+  @font-face {
+    font-family: fonttest17;
+        src: url('../font/Blackrush.otf');
+    }
+
+    @font-face {
+      font-family: fonttest18;
+          src: url('../font/Magic.ttf');
+      }
+
+      @font-face {
+        font-family: fonttest19;
+            src: url('../font/Amatic.ttf');
+        }
+
+        @font-face{
+            font-family: fonttest20;
+            src: url('../font/Ledira Demo.otf');
+        }
+        @font-face{
+            font-family: fonttest21;
+            src: url('../font/Mahameru.otf');
+        }
+        
+        @font-face{
+            font-family: fonttest22;
+            src: url('../font/Ainsley.ttf');
+        }
+        @font-face{
+            font-family: fonttest23;
+            src: url('../font/Brush Sharp.otf');
+        }
+
+       @font-face{
+            font-family: fonttest24;
+            src: url('../font/comic.tff');
+        }
+
+
+        

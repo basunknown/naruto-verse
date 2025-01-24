@@ -1,0 +1,167 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>Uchiha Clan</title>
+
+
+<style>
+ 
+ .fullpage{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height:100%;
+      position:fixed;
+      z-index: 150;
+      background-color: black;
+    }
+  
+  
+    .loader{
+      margin: auto;
+      display: block;
+      color: aliceblue;
+      position: relative;
+      /* background-color: red; */
+      width:150px;
+      height: 150px;
+      
+      text-align: center;
+    }
+  
+    .loaderfirst{
+      width:120px;
+      height:120px;
+      border:9px solid white;
+      border-top:9px solid rgba(255, 255, 255, 0);
+      /* background-color: blue; */
+      border-radius: 50%;
+      content: '\200b';
+      animation: firstloader 1s linear infinite;
+    }
+  
+    .loadersecond{
+      top: -123px;
+      left: -6px;
+      position:relative;
+      width:90px;
+      height:90px;
+      margin: auto;
+     border:9px solid white;
+     border-left:9px solid rgba(255, 255, 255, 0);
+     /* background-color: green; */
+      border-radius: 50%;
+      animation: secondloader 1s linear infinite;
+      
+    }
+  
+    @keyframes firstloader{
+      to{
+        transform: rotate(360deg);
+      }
+    }
+  
+    @keyframes secondloader{
+      to{
+        transform: rotate(-360deg);
+      }
+    }
+  
+  
+  
+       .text {
+  font-size: 30px;
+  font-weight: bold;
+  width: fit-content;
+  font-family:fonttest22, monospace;
+  animation: l4 1.2s steps(4) infinite;
+  }
+  
+  .iframeloader1{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index: 100;
+    animation:fadeaway 0.1s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  @keyframes fadeaway{
+    to{
+      opacity: 0;
+        visibility: hidden;
+    }
+  
+  }
+  
+  
+  ::-webkit-scrollbar{
+    background-color: rgba(82, 82, 82, 0.678);
+    border-radius: 18px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(94, 93, 93, 0.726);
+    border-radius: 18px;
+  
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5f5f5f; 
+  }
+  
+  
+  html,body {
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    min-height: 4px;
+    background-color: black;
+    user-select: none; 
+   
+  
+    }
+
+
+    
+  </style>
+
+  
+               <meta name="viewport" content="
+        width=device-width, initial-scale=1.0">
+       </head>
+  
+
+       <body class="" id="js">
+
+
+
+        <div class="loader">
+          <div class="loaderfirst">
+            </div>
+      
+          <div class="loadersecond">
+            </div>
+            <h3 class="text">loading<span id="dot"></span></h3>
+            </div>
+
+         
+            <script >
+
+
+
+
+            </script>
+
+  </body>
+</html>

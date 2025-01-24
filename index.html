@@ -1,0 +1,327 @@
+<!DOCTYPE html><html>
+    <head>
+        <title>
+           Naruto Verse
+        </title>
+        
+        
+        <link rel="icon" href="00symbol\map.png">
+        <link rel="stylesheet" type="text/css" href="0cssJava\loaderanimation.css">
+        <link rel="stylesheet" type="text/css" href="0cssJava\fonts.css">
+        <link rel="stylesheet" type="text/css" href="0cssJava\footer.css">
+        
+
+        
+        <meta name="viewport" content="width-width, initial-scale=01">
+
+    <!-- <script src="0cssJava\mapsearch.js" defer></script> -->
+
+
+
+<style>
+
+::-webkit-scrollbar{
+    background-color: rgba(192, 159, 97, 0.5);
+    border-radius: 18px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+  }
+   
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(161, 106, 4, 0.671);
+    border-radius: 6px;
+  
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5f5f5f; 
+  }
+  
+
+
+
+   html,body {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+margin: 0px;
+  background-color: black;
+  
+  scroll-behavior:smooth;
+  background-color:rgb(32, 32, 32);
+  }
+
+
+    .mapmenu{
+      position: relative; z-index:1; display: block; margin: auto;  text-align: center; box-shadow: 1px 1px 12px black; background-color:rgb(224, 97, 50);  width:1600px;  height:fit-content; min-height: 84px;
+    }
+
+    .mapmenup{
+     color:darkblue; display: block; margin: auto; padding:1%;   font-size:35px;
+     font-family: fonttest5;
+    }
+
+    .line{
+      width:100%; width:1600px;  position:absolute; background-color:white; text-align:center; height:27px; z-index: 1; box-shadow:1px 1px 12px;
+    }
+
+    .searchiframe{
+    width: 204px;
+    height:50px;
+    border-radius: 10px 10px 10px 10px;
+    position: fixed;
+   z-index: 1545;
+    left:5%;
+  top:104px;
+   display: block;
+  margin-top: 9px;
+  width:204px;
+  z-index: 45;
+  height: 300px;}
+
+    .searchbox{
+      position: absolute; opacity:40%; margin:auto; display: block;
+      transition: 0.4s;
+    }
+
+    .searchbox:hover {
+      opacity:100%;
+    }
+
+
+    #searcherror{
+    background-color: aliceblue;
+    box-shadow: 0px 0px 8px;
+     position:fixed;
+display: none;
+justify-content: center;
+align-items: center;
+height: 200px;
+width:55%;
+top:19%;
+left: 0px;
+right:0px;
+ z-index: 2; 
+ margin:auto;
+}
+
+
+
+
+
+  .iframehere{
+    display: block;
+    /* width:100%; */
+    margin:auto;
+    width:1600px;
+    height:905px;
+    background-color: black;
+    scrollbar-width: thin;
+  scrollbar-color: red;
+  scroll-margin-top:485px;
+    
+
+
+  }
+
+  iframe::-webkit-scrollbar { display: none; }
+
+
+  /* .LobjectFrame{
+    position:absolute;
+    background-color: yellow;
+    top: 42px; 
+    left:667px;
+    height: auto;
+    width:203px;
+    border-radius: 16px 14px 3px 2px;
+    } */
+
+
+
+       
+.slideshow{
+  display: flex; background-color:rgb(32, 32, 32); margin:auto; width:1600px; overflow: hidden;
+}
+
+
+.slide{
+    height:100px; 
+    display: block;
+    animation:slide 16s linear infinite;
+}
+
+.slide1{
+    height:100px;
+    display: block;
+    animation:slide 16s linear infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform: translateX(0%);
+  }
+
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+
+
+       /* @media screen and (max-width:1100px) {
+        body{zoom:150%;}
+       }*/
+
+               /* min-width:225px;
+        width:100%; */
+
+
+       @media screen and (max-width:940px) {
+        ::-webkit-scrollbar{
+   height: 0px;
+  }
+        /* html,body{
+scrollbar-width: 45px;     } */
+       .line{
+        width:100%;
+       
+      }
+      .searchcontainer{
+        top:184px;
+      }
+
+       .iframehere{
+        width:100%;
+        height: 900px;
+        
+       }
+     
+
+
+       .mapmenu,.slideshow{
+       font-size: 14px;  min-width:225px;
+       width:100%;}
+      
+      }
+
+
+
+       @media screen and (max-width:700px) {
+       .iframehere{
+        height: 700px;
+       }   
+      }
+
+
+
+</style>
+
+</head>
+
+
+<body id="js">
+                  <div class="fullpage">
+
+
+    <div class="loader">
+    <div class="loaderfirst">
+      </div>
+
+    <div class="loadersecond">
+      </div>
+      <h3 class="text">loading<span id="dot"></span></h3>
+      </div>
+
+
+      </div>
+
+            <div class="mapmenu">
+                <P class="mapmenup"> Map of The 5 Great Nations and various Hidden Villages</p>
+
+
+
+                    <div class="line"></div>
+                    </div>
+
+
+                     <iframe frameborder="0" scrolling="no" id="iframesearch" class="searchiframe" src="0search/searchM.html"></iframe>
+                      
+
+
+                      <div id="searcherror">
+                         <p><h2 id="negativedisplay"></h2>
+                  <h2 style="color:red;" id="errormessage"></h2>
+                  <h2 id="negativedisplayConfirmed"></h2></p>
+                           </div>
+
+
+<iframe frameBorder="0" class="iframehere" src="map.html">
+</iframe>
+
+<!-- <div class="slideshow">
+    <img class="slide" src="listofpics.webp">
+   <img class="slide1" src="listofpics.webp">
+</div> -->
+
+
+    
+        <div class="footer">
+<div class="footercontent">
+            <div class="pcontainer">
+                <p>
+                I can creat a simple website like this and send the codes to you. I can help you with image editing and video subtitling.
+            </p>
+            </div>
+        
+                <div class="icon" >
+                <a href="https://www.upwork.com/freelancers/~01cedb747c8d25be81"><img src="00symbol/upwork.png"></a>
+                <a href="https://www.peopleperhour.com/freelancer/design/bastou-adedeji-photo-editing-web-design-zanyxnqy"><img src="00symbol/peopleperhour.png"></a>
+                </div>
+                
+                <div class="footercopyright">
+                  <hr>
+                <p >@ all right reserved to the author Basade</p>
+        </div>
+           </div>
+           </div>
+
+           <script src="0cssJava/loaderDotAnimation.js"></script>
+           <script>
+
+
+
+
+window.addEventListener('load' , function(){
+ let preloader= document.getElementsByClassName('fullpage')[0];
+ preloader.classList.add('iframeloader1');
+document.body.style.overflow = 'scroll';
+
+
+});
+
+let slideshow=document.getElementsByClassName('slideshow')[0];
+slideshow.onmouseover=stopSlideshow;
+slideshow.onmouseout=playSlideshow;
+
+function stopSlideshow(){
+  document.getElementsByClassName('slide')[0].style.animationPlayState="paused";
+  document.getElementsByClassName('slide1')[0].style.animationPlayState="paused";
+
+}
+
+function playSlideshow(){
+  document.getElementsByClassName('slide')[0].style.animationPlayState="running";
+  document.getElementsByClassName('slide1')[0].style.animationPlayState="running";
+  
+}
+
+
+           </script>
+           </body>
+           </html>

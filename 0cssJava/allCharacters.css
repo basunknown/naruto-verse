@@ -1,0 +1,725 @@
+body{
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+#menu{
+/* height:fit-content; */
+display:flex;
+box-shadow:1px 1px 5px;
+position: relative;
+height:63px;
+/* height: 200%; */
+width:100%;
+box-shadow:0px 0px 12px;
+}
+
+#menuLog{
+position: relative; margin: auto; width: fit-content; display: flex;
+}
+
+
+.LobjectFrame{
+position: absolute;
+right:13%;  
+top:12px;
+width:204px;
+height:50px;
+/* background-color: aqua; */
+height: 300px;
+}
+
+.map{
+float: left; height:63px;
+}
+
+
+.smallsizesearch{
+display: none;
+margin: auto;
+width: 234px;
+height:50px;
+margin-top: 2px;
+box-shadow: 0px 0px 5px;
+border-radius: 10px 10px 10px 10px;
+background-color: rgba(255, 255, 255, 0.67);
+
+}
+
+
+.iconInMBar{
+  height:53px;
+  margin-top:4px;
+}
+
+
+
+.smallsizesearch iframe{
+margin: auto;
+display: block;
+margin-top: 9px;
+width:204px;
+height: 300px;
+/* background-color: black; */
+
+
+}
+
+
+#searcherror{
+background-color: aliceblue;
+box-shadow: 0px 0px 8px;
+position: absolute;
+display: none;
+height: 200px;
+width:55%;
+top:150px;
+left: 0px;
+right:0px;
+z-index: 1; 
+margin:auto;
+text-align: center;
+line-height: 34px;
+justify-content: center;
+
+}
+
+#negativedisplay, #errormessage, #negativedisplayConfirmed{
+height: 10px;
+transform: translateY(25px);
+}
+
+
+.firstPage{
+display: flex; 
+align-items: center;
+justify-content: center;
+width:100%;
+min-height: 100vh;
+/* background-color: red; */
+}
+
+
+
+.imageDisplay{
+/* background-color: aqua; */
+  margin: auto;
+  overflow-x:auto;
+}
+
+.imageDisplay::-webkit-scrollbar{
+  /* height: 0px; */
+  height: 0px;
+  display: none;
+}
+
+
+#image{
+  margin: auto;
+  display: flex;
+}
+
+.images{
+  object-fit:contain;
+  min-height: 350px;
+  max-height:500px;
+  height: 100%;
+
+
+}
+
+
+
+
+
+.iconMenu{
+  display:block; position:fixed; width:65px; right:0px; height:fit-content; top:95px; background-color: color;
+}
+
+.touch{
+  display: flex; align-items: center; justify-content: center; width:80px; height:10px; position: absolute; right: 0px; z-index: 1; margin-top:70px;
+}
+
+.loader0{
+margin: auto;
+position: absolute;
+border: 4px solid blue;
+width:0px;
+height:0px;
+border-radius:50%;
+animation: loader 3s infinite ease-in;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.loader1{
+margin: auto;
+position: absolute;
+border: 4px solid green;
+width:0px;
+height:0px;
+border-radius:50%;
+animation: loader1 3s infinite ease-in;
+animation-delay: 1s;
+
+}
+
+.loader2{
+margin: auto;
+position: absolute;
+border: 4px solid red;
+width:0px;
+height:0px;
+border-radius:50%;
+animation: loader1 3s infinite ease-in;
+animation-delay: 2s;
+}
+
+
+@keyframes loader{
+to{
+width:70px;
+height: 70px;
+opacity:0;
+
+}
+}
+
+@keyframes loader1{
+to{
+width:70px;
+height: 70px;
+opacity:0;
+}
+}
+
+@keyframes loader2{
+to{
+width:70px;
+height: 70px;
+opacity:0;
+}
+} 
+
+.iconLeft{
+  height:65px; margin-top:0px; cursor: pointer;
+}
+.iconRight{
+  height:55px; margin-top:10px; cursor: pointer;
+}
+
+
+
+
+
+
+
+.info{
+position:fixed; 
+top: 0; width: 100%; 
+height:100%; 
+background-color: rgba(0, 0, 0, 0.719);
+display: none; 
+backdrop-filter: blur(45px);
+overflow-y: auto;
+
+
+}
+
+
+
+
+.containerscroll{
+position: relative;
+top:18px;
+  width:140px;
+  height:535px;
+  min-height: 300px;
+  display:flex;
+  /* background-color: red; */
+  margin: auto;
+  animation: cunscroll 2s ease-in-out;
+  animation-fill-mode: forwards ;
+
+
+
+  
+}
+
+
+@keyframes cunscroll{
+  to{
+    width:98%;
+  }
+} 
+
+.scrollstick{
+  width:65px;
+  height: 450px;
+  /* min-height: 320px; */
+  background-color:rgb(129, 34, 34); box-shadow: 1px 1px 10px; z-index: 2;
+  border-radius:100%/ 25px 25px 15px 15px
+}
+
+/* 
+::-webkit-scrollbar{
+ height: 0px;
+} */
+
+.scrollcontent{
+  position: relative;
+  animation: conunscroll 2s ease-in-out;
+  /* background-blend-mode:overlay; */
+  background-position: center;
+  /* background-position-x:; */
+  animation-fill-mode: forwards ;
+  background-color: rgb(245, 245, 198);
+  height: 425px;
+  /* min-height: 220px; */
+    font-size:22px; 
+    width: 3px;
+    top: 14px;
+    display: block;
+    overflow: auto;
+      overflow-y: hidden;
+      box-shadow: 1px 1px 8px rgb(88, 88, 62);
+      
+}
+
+@keyframes conunscroll{
+  to{
+    width:98%;
+  }
+}
+
+
+
+.scrollcontentspan{
+  background-position: center;
+  background-blend-mode:darken;
+  /* mix-blend-mode: lighten; */
+  width:100%;
+  position: relative;
+  min-width: max-content;
+  display: flex; 
+  margin: auto;
+  top:32px;
+  text-align: center;
+  background-color:rgb(244, 245, 240);
+  color: rgb(83, 4, 4);
+  height: 84%;
+  box-shadow: 0px 0px 8px rgba(139, 0, 0, 0.705);
+  overflow-x: none;
+  /* overflow-y: hidden; */
+  
+}
+
+
+  .paperscreen{
+  
+  opacity:60%;
+  background-position: center;
+  min-width:fit-content;
+  width: 100%;
+  display:none;
+  height: 100%;
+  position: relative;
+  z-index: 1;}
+
+
+.scrollcontentp{
+ 
+  /* background-color: #5f5f5fe5; */
+  opacity: 80%;
+  position: relative;
+  column-width:220px;
+  column-rule: solid 1px rgba(255, 0, 0, 0.103);
+  column-gap: 30px;
+  text-align: left;
+  margin:auto;
+  column-fill:auto;
+  padding: 12px;
+  /* column-count:1; */
+  /* width: 250px; */
+  /* column-count:4; */
+  max-width: fit-content;
+  height: 300px;
+  padding-left: 12px;
+  color: rgba(77, 16, 8, 0.925);
+  /* font-family:fonttest6; 
+   font-size: 23px; */
+  font-family:fonttest24;
+  font-size: 21px;
+  z-index: 0;
+}
+
+.scrollcontentp a, .scrollcontentp a:visited{
+  color: rgb(138, 7, 7);
+}
+
+.scrollcontentp a:active{
+  color: red;
+}
+
+.scrollcontentp a, .scrollcontentp a:visited{
+  color: rgb(138, 7, 7);
+}
+
+.scrollcontentp a:active{
+  color: red;
+}
+
+
+.jutsuContainer{
+  width:100%; 
+  display: none;
+ /* justify-content: center;
+ align-items: center; */
+ align-content: center;
+  position:fixed;
+  background-color: rgba(0, 0, 0, 0.719);
+  height: 100%;
+  top:0px;
+  backdrop-filter: blur(45px);
+  overflow-y:auto;
+}
+
+.closeJutsu{
+  height:25px; position: absolute;  top:10px; right: 1%; font-family: sans-serif,bold; margin-top: 0px;  font-size: 35px; color: rgb(130, 133, 136);
+}
+
+.closeJutsu:hover{
+  cursor: pointer;
+}
+
+.generalJutsuContainer{
+left: 1%; position: absolute; top:10px;  backdrop-filter: blur(5px); width:fit-content; max-width: 90%; height: fit-content;
+}
+
+.generalJutsuInfo{
+ height: 34px; opacity:40%; pointer-events: none;
+}
+
+.generalSkill{
+  width:85%;
+  color: rgb(179, 176, 176); font-size:20px;
+  margin: auto;
+  display: none;
+}
+
+.generalJutsuContainer:hover .generalSkill{
+    display: block;
+    padding-bottom: 35px;
+}
+
+.jutsusTable{
+  /* background-color: red; */
+width:100%;
+height: fit-content;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+text-align: center;
+/* padding-left:15px;
+padding-right:15px ; */
+padding-bottom:5px;
+
+}
+
+.popUp{
+  /* background-color: yellow; */
+color: white;
+width:45%; height:fit-content;
+/* margin-top:120px ; */
+
+/* background-color: red; */
+
+}
+
+#jutsuTitle{
+  width:fit-content; font-family: sans-serif; font-size: 25px; display: block; margin: auto; width:70%; text-align: center; color:rgb(119, 8, 8); text-shadow: 0px 0px 12px;
+  /* margin-top:55px;  */
+}
+
+
+#jutsuInfoDisplay{
+  width:fit-content;display: block; margin: auto;
+}
+
+#jutsuInfo{
+  width:100%; max-width:656px; overflow-Y:auto; height:115px; display: block; margin: auto; font-family: sans-serif; font-size: 18px; text-align: left; color:rgb(212, 212, 212);
+}
+
+#jutsuInfo::-webkit-scrollbar{
+  width:1px;
+  background-color:rgba(151, 44, 44, 0.781);
+}
+
+#jutsuInfo::-webkit-scrollbar-thumb{
+  width:1px;
+  background-color:rgba(15, 97, 15, 0.753);
+}
+
+.jutsusList{
+  width:30%;
+  height:100%;
+  display:block;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+  /* background-color: blue; */
+}
+
+.jutsus{
+  width:200px;
+  height:480px;
+  overflow-y:auto;
+  margin: auto;
+  display:block;
+  /* text-align: center; */
+  /* mask-image: -webkit-linear-gradient(green 69%); */
+  /* background-color: aqua; */
+  mask-image: linear-gradient( rgba(255,0,0,0)-1%, rgba(255,0,0,1), rgba(255,0,0,0)101% ) ;
+  /* scrollbar-width: 0px; */
+}
+
+.jutsus::-webkit-scrollbar{
+  width:1px;
+  background-color: rgb(87, 67, 67);
+}
+
+
+.jutsu{
+ width:180px;
+ height:102px;
+ background-color: black;
+ pointer-events: none;
+}
+
+.jutsuTitle{
+  pointer-events:none; text-align:center;
+  font-size: 18px; width:90%; margin: auto;
+  padding-top: 12px;
+  font-family: sans-serif;
+  
+}
+
+.closeInfo{
+  height:25px;  top:10px;float: right; margin-right: 10px; font-family: sans-serif,bold; margin-top: 0px;  font-size: 35px; color: rgb(130, 133, 136); cursor: pointer;
+}
+
+
+
+.jutsuCard{
+  border: solid 1px rgb(255, 255, 255);
+  /* background-color: red; */
+  width:180px;
+   height:fit-content;
+  cursor: pointer;
+  margin-top:5px ;
+  padding-bottom:15px;
+  color:rgb(255, 255, 255);
+}
+
+
+.jutsuCard:hover{
+  border: solid 1px rgb(121, 121, 14);
+  color:rgb(110, 110, 11);
+}
+
+
+.videoInfo{
+  width:258px;
+ height:150px;
+}
+
+
+
+.footer{
+box-shadow: 1px, 1px 22px 2px red;
+background-color:rgb(32, 32, 32);
+font-family: sans-serif;
+color: antiquewhite;
+padding-bottom: 22px;
+align-items: center;
+/* display: none; */
+height:fit-content;
+padding-top: 72px;
+font-size: 13px;
+display: flex;
+width:100%;
+}
+
+
+
+.footercontent{
+height: fit-content;
+display: block;
+margin: auto;
+/* min-width: 225px;   */
+}
+
+
+.pcontainer{
+display:block; margin:auto;  width:80%;
+/* background-color: red; */
+}
+
+
+.pcontainer p{
+display:block; 
+margin:auto;
+width: 90%;
+text-align: left;
+}
+
+        .icon{
+          display:block;
+          margin:auto;
+            width:fit-content;
+            margin-top:10px ;
+        }
+
+        .icon img{
+            width:30px;
+        }
+
+.footercopyright{
+display:block;
+margin:auto;
+width: 100%;
+/* background-color: #5f5f5f; */
+} 
+
+hr{
+text-align: left;
+margin: auto;
+display: block;
+margin-top:18px;
+width:70%;
+border: solid gray 0.1px;
+}
+
+
+.footercopyright p{
+display:block;
+margin:auto;
+margin-top:8px;
+text-align: center;
+width:100%;
+}
+
+@media screen and (max-width: 730px) {
+
+
+.iframeCover{
+z-index: 5;
+height: 80px;
+width: 100%;
+top:auto;
+left:0px; 
+right:0px;
+margin-left:auto;
+margin-right:auto;
+/* background-color: black; */
+}
+
+.smallsizesearch{
+position: relative;
+display: flex;
+}
+
+
+.LobjectFrame{
+z-index: 0;
+display: none;
+}
+}
+
+@media screen and (max-width:571px) {
+
+.jutsuTitle{
+padding-top: 5px;
+align-content: center;
+/* background-color: black; */
+height:55px;
+font-size: 18px;
+width:100%;
+}
+.popUp{
+/* background-color: green; */
+margin: auto;
+width:100%;
+
+}
+
+#jutsuTitle{
+width:89%;
+  margin-top:15%; 
+}
+
+.jutsusTable{
+width: 100%;
+height: fit-content;
+/* background-color: yellow; */
+display: block;
+margin: auto;
+align-content: center;
+}
+
+.jutsusList{
+  width:100%;
+  height:fit-content;
+  display:flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  }
+
+.jutsus{
+width:100%;
+  height:fit-content;
+  width: fit-content;
+  padding-left: 25px;
+  padding-right: 25px;
+  overflow-y:auto;
+  text-align: center;
+  /* background-color: green; */
+  position: relative;
+  margin: auto;
+  padding-bottom: 20px;
+  display: flex;
+  /* margin: auto; */
+  /* padding-left: 18%; */
+
+  mask-image: linear-gradient(to right, rgba(255,0,0,0)2%, rgba(255,0,0,1), rgba(255,0,0,0)97% ) ;
+}
+
+
+#jutsuInfo{
+height:85px;
+width:88%;
+margin: auto;
+}
+
+.jutsus::-webkit-scrollbar{
+  height:1px;
+  background-color: rgb(87, 67, 67);
+}
+
+
+.jutsuCard{
+  border: solid 1px rgb(255, 255, 255);
+  /* background-color: red; */
+  padding-bottom: 5px;
+
+   height:185px;
+}
+
+
+}

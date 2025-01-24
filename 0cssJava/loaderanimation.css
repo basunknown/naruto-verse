@@ -1,0 +1,90 @@
+.fullpage{
+  display: flex;
+  justify-content: center;
+  /* margin-top: ; */
+  width: 100%;
+  height:100vh;
+  position:fixed;
+  z-index: 100;
+  background-color: black;
+}
+
+
+.loader{
+  margin: auto;
+  display: block;
+  color: aliceblue;
+  position: relative;
+  margin-top: 255px;
+  /* background-color: red; */
+  width:150px;
+  height: 150px;
+  text-align: center;
+}
+
+.loaderfirst{
+  width:120px;
+  height:120px;
+  border:9px solid white;
+  border-top:9px solid rgba(255, 255, 255, 0);
+  /* background-color: blue; */
+  border-radius: 50%;
+  content: '\200b';
+  animation: firstloader 1s linear infinite;
+}
+
+.loadersecond{
+  top: -123px;
+  left: -6px;
+  position:relative;
+  width:90px;
+  height:90px;
+  margin: auto;
+ border:9px solid white;
+ border-left:9px solid rgba(255, 255, 255, 0);
+ /* background-color: green; */
+  border-radius: 50%;
+  animation: secondloader 1s linear infinite;
+  
+}
+
+@keyframes firstloader{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes secondloader{
+  to{
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+.text {
+
+  font-size: 30px;
+  width: fit-content;
+  margin-top: -58px;
+  margin-left:18px ;
+  font-family:fonttest15;
+}
+
+
+.iframeloader1{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index: 100;
+  animation:fadeaway 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeaway{
+  to{
+      opacity:0;
+      visibility: hidden;
+  }
+
+}
