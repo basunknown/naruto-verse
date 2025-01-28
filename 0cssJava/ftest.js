@@ -1,36 +1,36 @@
 window.oncontextmenu=disablerightclick;
 
 function disablerightclick(){
-        return false;
+      return false;
 }
+
+
 
 
 
 window.addEventListener('load' , function(){
-  let preloader= document.getElementsByClassName('fullpage')[0];
-  preloader.classList.add('iframeloader1');
- //  preloader.style.display='none';
-//  document.getElementsByTagName('body')[0].scrollTop=0;
+ let preloader= document.getElementsByClassName('fullpage')[0];
+ preloader.classList.add('iframeloader1');
+//  preloader.style.display='none';
+document.getElementsByTagName('body')[0].style.overflowY='scroll';
 
- document.getElementsByTagName('body')[0].style.overflowY='scroll';
+let  userAgent=navigator.userAgent;
+if(userAgent.indexOf("Firefox") > -1){
+document.getElementsByClassName('introinfoP')[0].style.scrollbarWidth="thin";
+document.getElementsByClassName('hiddenvillagep')[0].style.scrollbarWidth="thin";
+ }
+});
 
- let  userAgent=navigator.userAgent;
- if(userAgent.indexOf("Firefox") > -1){
- document.getElementsByClassName('introinfoP')[0].style.scrollbarWidth="thin";
- document.getElementsByClassName('hiddenvillagep')[0].style.scrollbarWidth="thin";
-}
 
- });
+let iframecover= document.getElementsByClassName("iframeCover")[0];
 
- 
- let iframecover= document.getElementsByClassName("iframeCover")[0];
- let overlay= document.getElementsByClassName("filteroverlay")[0];
+let overlay= document.getElementsByClassName("filteroverlay")[0];
 
- let buttono= document.getElementById('characterlistAOcontainer');
- buttono.onclick= displaychatacterListO;
- 
- let buttonc= document.getElementById('characterlistAC');
- buttonc.onclick= displaychatacterListC;
+let buttono= document.getElementById('characterlistAOcontainer');
+buttono.onclick= displaychatacterListO;
+
+let buttonc= document.getElementsByClassName("characterlistA")[0];
+buttonc.onclick= displaychatacterListC;
 
 
 
@@ -46,59 +46,34 @@ function handgone(){
 }}
 
 
-
-
-let characterlist=document.getElementsByClassName("characterposition")[0];
-let pos;
-
 function displaychatacterListO(){
-  overlay.style.display= "block";
   iframecover.style.display="block";
-  characterlist.style.display= "block";
-  pos=104;
+  buttonc.style.display="block";
+  buttono.style.display="none";
+ }
+ 
+ 
+ for(let i=0; i<6; i++){
+   document.getElementById('forCharacterRemoval'+i).onclick=displaychatacterListC;
+   document.getElementById('forCharacterRemoval'+i).onclick=unckeck;
+ 
+ }
+ 
+ 
+  function displaychatacterListC(){
 
-  out();
-
-
-  function out(){
-
-if(pos==0){
-  window.cancelAnimationFrame(out);
-}else{
-  pos-=8;
-  characterlist.style.transform="translateX("+pos+"%)";
-  window.requestAnimationFrame(out);
-}
-characterlist.style.display= "block";
-}
-
-}
-
-
-for(let i=0; i<6; i++){
-  document.getElementById('forCharacterRemoval'+i).onclick=displaychatacterListC;
-}
-
-function displaychatacterListC(){
-  overlay.style.display= "none";
   iframecover.style.display="none";
-  let posin=pos;
+   buttono.style.display="block";
 
-  into();
-function into(){
-if(posin==104){
-cancelAnimationFrame(into);
-characterlist.style.display= "none";
-}else{
-posin+=8;
-characterlist.style.transform="translateX("+posin+"%)";
-requestAnimationFrame(into);
-}
+ }
+ 
+ function unckeck(){
+  iframecover.style.display="none";
+  buttono.style.display="block";
+   document.getElementById("verifiedIf").checked=false;
+ }
 
 
-}
-
-}
 
 let clansbutton = document.getElementsByClassName('fclansbutton');
 let slideimages =document.getElementsByClassName("slideimages");

@@ -39,7 +39,8 @@ border-radius: 6px;
 
 
 .characterlistA{
-  background-color:rgb(132, 0, 255);
+  box-shadow:1px 1px 8px rgb(132, 0, 255);
+  color:rgb(144, 57, 224);;
 }
 
 .characternames{

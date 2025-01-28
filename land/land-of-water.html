@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" href="..\00symbol\Nland of water.png">
+                <link rel="stylesheet" type="text/css" href="..\0cssJava\alllands.css">
+                <link rel="stylesheet" type="text/css" href="..\0cssJava\loaderanimation.css">
+        <link rel="stylesheet" type="text/css" href="..\0cssJava\fonts.css">
+        <link rel="stylesheet" type="text/css" href="..\0cssJava\footer.css">
+        <title>
+            land of water
+        </title>
+                <meta name="viewport" content="
+        width=device-width, initial-scale=1.0">
+    
+
+    <style>
+body{
+        background-image:url("land of water.webp")
+    }
+
+    .landmenu{
+        box-shadow:rgb(20, 57, 99) 2px 2px 10px;
+    }
+
+
+    .listofcharacterwrap::-webkit-scrollbar{
+    background-color: rgb(177, 203, 233);
+    border-radius: 18px;
+  }
+
+
+   
+  
+  .listofcharacterwrap::-webkit-scrollbar-thumb {
+    background: rgba(17, 82, 126, 0.842);
+    border-radius: 6px;
+  
+  }
+
+
+    .nameOfLand{
+        color:rgb(8, 64, 116);
+    }
+
+
+    .map{
+        box-shadow:rgb(16, 66, 107) 1px 1px 8px;
+    }
+
+    .smallsizesearch{
+        box-shadow:rgb(14, 37, 88) 2px 2px 10px;
+    }
+
+
+    .characterlistA{
+      box-shadow: 1px 1px 8px blue;
+      color:rgb(106, 106, 224);
+    }
+
+    .characternames{
+        color:rgb(21, 21, 155);
+    }
+
+    .introinfo p{
+        color: rgb(41, 114, 224);
+    }
+
+    .secondpage{
+        background-image:url('land of water hidden mist village.webp');
+    }
+
+
+    .hiddenvillagewrap{
+        box-shadow:rgb(9, 42, 92) 2px 2px 8px;
+    }
+
+    .hiddenvillagep{
+        color:rgb(3, 38, 85);
+    }
+
+
+    .thirdpageline, .thirdpagetitle{
+        background-color: darkblue;
+    }
+
+    .clansbutton{
+        background-color:rgba(0, 47, 255, 0.452);
+    }
+
+
+        .slideimagename span:hover{
+        box-shadow: 1px 1px 9px blue;
+    }
+    
+    .slideimagename span a{
+        color: blue;
+    }
+
+
+    #buttonssenju{
+        background-size: 80px;
+        height:70px;
+        width:140px;
+    }
+
+    #buttonsuchiha{
+        background-size: 40px;
+    }
+
+    #buttonsChinoike{
+        background-size: 42px;
+    }
+
+    #buttonsyuki{
+        background-size: 25px;
+    }
+
+
+    @media  screen and (max-width: 482px) {
+        #buttonssenju{
+            width: 100px;
+            background-size: 60px;
+            height:50px;
+        }
+
+        #buttonsuchiha{
+            background-size: 25px;
+        }
+
+        #buttonsChinoike{
+            background-size: 32px;
+        }
+
+        #buttonsyuki{
+            background-size: 20px;
+        }
+    }
+
+
+
+
+    </style>
+
+</head>
+
+
+    <!-- menu or header-->
+    <body class="" id="js">
+
+    <div class="fullpage">
+
+
+    <div class="loader">
+    <div class="loaderfirst">
+      </div>
+
+    <div class="loadersecond">
+      </div>
+      <h3 class="text">loading<span id="dot"></span></h3>
+      </div>
+
+
+      </div>
+
+      
+      
+
+        <div class="firstview">
+      <div id="forCharacterRemoval0" class="landmenu">            <div draggable="false" class="nameOfLand">
+                <img  class="nameOfLandimg" draggable="false"   src="..\00symbol\Nland of water.png">
+                <span class="landnamespan">
+                    <a id="landname">LAND OF WATER</a>
+                </span>
+            </div>
+        
+            <iframe  class="LobjectFrame" frameborder="0" scrolling="no" src="../0search/search.html"></iframe>
+
+            <a href="../index.html"><img draggable="false"  class="map" src="..\00symbol\map.jpg"></a>
+        <!-- <img class="hidden" draggable="false" src="..\00symbol\hiddenlines.png"> -->
+        </div>
+        <!-- cover that triggers the removal of the character list -->
+        
+
+
+                <div id="forCharacterRemoval5" class="iframeCover"></div>
+
+        <div id="smallsizesearch" class="smallsizesearch">
+            <iframe id="iframesearch" frameborder="0" scrolling="no" src="../0search/search.html"></iframe>
+        </div>
+
+
+        <!-- list of character to be displayed -->
+        <div class="characterdisplay">
+            <!-- start -->
+            <!-- character triggrer -->
+                         <input type="checkbox" id="verifiedIf" style="position: fixed; display: none;">
+
+              <label for="verifiedIf">
+      <div id="characterlistAOcontainer"></div>
+      </label>
+
+      
+      <div class="filteroverlay"></div>
+
+
+            <!--
+            |
+            linked
+            |
+            -->
+            <!-- list of character -->
+            <div  class="characterposition">
+            <div  id="characterlist" class="landmem" >
+
+            
+            <div  class="listofcharacterwrap">
+            
+            <div class="titlecharacterlist">
+            <h3>Citizens of the Land (dead or alive)</h3>
+            <label class="characterlistA" for="verifiedIf"><h1 >X</h1></label>
+          </div>
+              
+            <br><br>
+            
+                <a href="#../character/ameyuri ringo.html"  class="ahreStuff"><div class="link" ><img title="Ameyuri Ringo" class="imageId" src="../idsImg\ameyuri ringo.webp"><div class="characternames"><p>Ameyuri Ringo</div></div></a>
+                    <br>
+                    <a href="#../character/Ao.html"  class="ahreStuff"><div class="link" ><img title="Ao" class="imageId" src="../idsImg\ao.webp"><div class="characternames"><p>Ao</div></div></a>
+                    <br>
+                    <a href="#../character/byakuren.html"  class="ahreStuff"><div class="link" ><img title="Byakuren" class="imageId" src="../idsImg\byakuren.webp"><div class="characternames"><p>Byakuren</div></div></a>
+                    <br>
+                    <a href="#../character/chinoike en oyashiro.html"  class="ahreStuff"><div class="link" ><img title="Chinoike en Oyashiro" class="imageId" src="../idsImg\chinoike en oyashiro.webp"><div class="characternames"><p>Chinoike en Oyashiro</div></div></a>
+                    <br>
+                    <a href="#../character/chinoike chino.html"  class="ahreStuff"><div class="link" ><img title="Chinoike chino" class="imageId" src="../idsImg\chinoike chino.webp"><div class="characternames"><p>Chinoike chino</div></div></a>
+                    <br>
+                    <a href="#../character/chojuro.html"  class="ahreStuff"><div class="link" ><img title="Chojuro" class="imageId" src="../idsImg\chojuro.webp"><div class="characternames"><p>Chojuro</div></div></a>
+                    <br>
+                    <a href="#../character/chukichi.html"  class="ahreStuff"><div class="link" ><img title="Chukichi" class="imageId" src="../idsImg\chukichi.webp"><div class="characternames"><p>Chukichi</div></div></a>
+                    <br>
+                    <a href="#../character/fuguki suikazan.html"  class="ahreStuff"><div class="link" ><img title="Fuguki Suikazan" class="imageId" src="../idsImg\fuguki suikazan.webp"><div class="characternames"><p>Fuguki Suikazan</div></div></a>
+                    <br>
+                    <a href="#../character/ganryu.html"  class="ahreStuff"><div class="link" ><img title="Ganryu" class="imageId" src="../idsImg\ganryu.webp"><div class="characternames"><p>Ganryu</div></div></a>
+                    <br>
+                    <a href="#../character/gozu.html"  class="ahreStuff"><div class="link" ><img title="Gozu" class="imageId" src="../idsImg\gozu.webp"><div class="characternames"><p>Gozu</div></div></a>
+                    <br>
+                    <a href="#../character/hachiya tsurushi.html"  class="ahreStuff"><div class="link" ><img title="Hachiya Tsurushi" class="imageId" src="../idsImg\hachiya tsurushi.webp"><div class="characternames"><p>Hachiya Tsurushi</div></div></a>
+                    <br>
+                    <a href="#../character/haku.html"  class="ahreStuff"><div class="link" ><img title="Haku" class="imageId" src="../idsImg\haku.webp"><div class="characternames"><p>Haku</div></div></a>
+                    <br>
+                    <a href="#../character/haku's mother and father.html"  class="ahreStuff"><div class="link" ><img title="Haku's Mother And Father" class="imageId" src="../idsImg\haku's mother and father.webp"><div class="characternames"><p>Haku's Mother And Father</div></div></a>
+                    <br>
+                    <a href="#../character/harusame.html"  class="ahreStuff"><div class="link" ><img title="Harusame" class="imageId" src="../idsImg\harusame.webp"><div class="characternames"><p>Harusame</div></div></a>
+                    <br>
+                    <a href="#../character/hassaku onomichi.html"  class="ahreStuff"><div class="link" ><img title="Hassaku Onomichi" class="imageId" src="../idsImg\hassaku onomichi.webp"><div class="characternames"><p>Hassaku Onomichi</div></div></a>
+                    <br>
+                    <a href="#../character/hebiichigo.html"  class="ahreStuff"><div class="link" ><img title="Hebiichigo" class="imageId" src="../idsImg\hebiichigo.webp"><div class="characternames"><p>Hebiichigo</div></div></a>
+                    <br>
+                    <a href="#../character/hoshigaki kisame.html"  class="ahreStuff"><div class="link" ><img title="Hoshigaki Kisame" class="imageId" src="../idsImg\hoshigaki kisame.webp"><div class="characternames"><p>Hoshigaki Kisame</div></div></a>
+                    <br>
+                    <a href="#../character/hoshigaki shizuma.html"  class="ahreStuff"><div class="link" ><img title="Hoshigaki Shizuma" class="imageId" src="../idsImg\hoshigaki shizuma.webp"><div class="characternames"><p>Hoshigaki Shizuma</div></div></a>
+                    <br>
+                    <a href="#../character/hozuki gengetsu.html"  class="ahreStuff"><div class="link" ><img title="Hozuki gengetsu" class="imageId" src="../idsImg\hozuki gengetsu.webp"><div class="characternames"><p>Hozuki gengetsu</div></div></a>
+                    <br>
+                    <a href="#../character/hozuki mangetsu.html"  class="ahreStuff"><div class="link" ><img title="Hozuki Mangetsu" class="imageId" src="../idsImg\hozuki mangetsu.webp"><div class="characternames"><p>Hozuki Mangetsu</div></div></a>
+                    <br>
+                    <a href="#../character/hozuki suigetsu.html"  class="ahreStuff"><div class="link" ><img title="Hozuki Suigetsu" class="imageId" src="../idsImg\hozuki suigetsu.webp"><div class="characternames"><p>Hozuki Suigetsu</div></div></a>
+                    <br>
+                    <a href="#../character/ichirota oniyuzu.html"  class="ahreStuff"><div class="link" ><img title="Ichirota Oniyuzu" class="imageId" src="../idsImg\ichirota oniyuzu.webp"><div class="characternames"><p>Ichirota Oniyuzu</div></div></a>
+                    <br>
+                    <a href="#../character/jinin akebino.html"  class="ahreStuff"><div class="link" ><img title="Jinin Akebino" class="imageId" src="../idsImg\jinin akebino.webp"><div class="characternames"><p>Jinin Akebino</div></div></a>
+                    <br>
+                    <a href="#../character/jinpachi munashi.html"  class="ahreStuff"><div class="link" ><img title="Jinpachi Munashi" class="imageId" src="../idsImg\jinpachi munashi.webp"><div class="characternames"><p>Jinpachi Munashi</div></div></a>
+                    <br>
+                    <a href="#../character/junsai.html"  class="ahreStuff"><div class="link" ><img title="Junsai" class="imageId" src="../idsImg\junsai.webp"><div class="characternames"><p>Junsai</div></div></a>
+                    <br>
+                    <a href="#../character/juzo biwa.html"  class="ahreStuff"><div class="link" ><img title="Juzo Biwa" class="imageId" src="../idsImg\juzo biwa.webp"><div class="characternames"><p>Juzo Biwa</div></div></a>
+                    <br>
+                    <a href="#../character/karatachi kagura.html"  class="ahreStuff"><div class="link" ><img title="Karatachi Kagura" class="imageId" src="../idsImg\karatachi kagura.webp"><div class="characternames"><p>Karatachi Kagura</div></div></a>
+                    <br>
+                    <a href="#../character/karatachi yagura.html"  class="ahreStuff"><div class="link" ><img title="Karatachi Yagura" class="imageId" src="../idsImg\karatachi yagura.webp"><div class="characternames"><p>Karatachi Yagura</div></div></a>
+                    <br>
+                    <a href="#../character/kurosuki buntan.html"  class="ahreStuff"><div class="link" ><img title="Kurosuki Buntan" class="imageId" src="../idsImg\kurosuki buntan.webp"><div class="characternames"><p>Kurosuki Buntan</div></div></a>
+                    <br>
+                    <a href="#../character/kurosuki raiga.html"  class="ahreStuff"><div class="link" ><img title="Kurosuki Raiga" class="imageId" src="../idsImg\kurosuki raiga.webp"><div class="characternames"><p>Kurosuki Raiga</div></div></a>
+                    <br>
+                    <a href="#../character/kushimaru kuriarare.html"  class="ahreStuff"><div class="link" ><img title="Kushimaru Kuriarare" class="imageId" src="../idsImg\kushimaru kuriarare.webp"><div class="characternames"><p>Kushimaru Kuriarare</div></div></a>
+                    <br>
+                    <a href="#../character/kussaku.html"  class="ahreStuff"><div class="link" ><img title="Kussaku" class="imageId" src="../idsImg\kussaku.webp"><div class="characternames"><p>Kussaku</div></div></a>
+                    <br>
+                    <a href="#../character/kyoho fuefuki.html"  class="ahreStuff"><div class="link" ><img title="Kyoho Fuefuki" class="imageId" src="../idsImg\kyoho fuefuki.webp"><div class="characternames"><p>Kyoho Fuefuki</div></div></a>
+                    <br>
+                    <a href="#../character/mei terumi.html"  class="ahreStuff"><div class="link" ><img title="Mei Terumi" class="imageId" src="../idsImg\mei terumi.webp"><div class="characternames"><p>Mei Terumi</div></div></a>
+                    <br>
+                    <a href="#../character/meizu.html"  class="ahreStuff"><div class="link" ><img title="Meizu" class="imageId" src="../idsImg\meizu.webp"><div class="characternames"><p>Meizu</div></div></a>
+                    <br>
+                    <a href="#../character/misuno.html"  class="ahreStuff"><div class="link" ><img title="Misuno" class="imageId" src="../idsImg\misuno.webp"><div class="characternames"><p>Misuno</div></div></a>
+                    <br>
+                    <a href="#../character/nowaki.html"  class="ahreStuff"><div class="link" ><img title="Nowaki" class="imageId" src="../idsImg\nowaki.webp"><div class="characternames"><p>Nowaki</div></div></a>
+                    <br>
+                    <a href="#../character/ruka.html"  class="ahreStuff"><div class="link" ><img title="Ruka" class="imageId" src="../idsImg\ruka.webp"><div class="characternames"><p>Ruka</div></div></a>
+                    <br>
+                    <a href="#../character/suiren.html"  class="ahreStuff"><div class="link" ><img title="Suiren" class="imageId" src="../idsImg\suiren.webp"><div class="characternames"><p>Suiren</div></div></a>
+                    <br>
+                    <a href="#../character/third mizukage.html"  class="ahreStuff"><div class="link" ><img title="Third Mizukage" class="imageId" src="../idsImg\third mizukage.webp"><div class="characternames"><p>Third Mizukage</div></div></a>
+                    <br>
+                    <a href="#../character/utakata.html"  class="ahreStuff"><div class="link" ><img title="Utakata" class="imageId" src="../idsImg\utakata.webp"><div class="characternames"><p>Utakata</div></div></a>
+                    <br>
+                    <a href="#../character/zabuza momochi.html"  class="ahreStuff"><div class="link" ><img title="Zabuza Momochi" class="imageId" src="../idsImg\zabuza momochi.webp"><div class="characternames"><p>Zabuza Momochi</div></div></a>
+                    </div>
+            </div>
+        </div>
+        </div>
+        <!-- end -->
+
+        
+
+                <div id="searcherror">
+             <p><h2 id="negativedisplay"></h2>
+                  <h2 style="color:red;" id="errormessage"></h2>
+                  <h2 id="negativedisplayConfirmed"></h2></p>
+               </div>
+
+        <!-- land info -->
+        <div id="forCharacterRemoval1"  class="firstpage">
+            <div id="introinfo" class="introinfo">
+                <p id="introinfoP" class="introinfoP">
+                    The land of water also refered to as the land of mist, consist of several islands with each having their own tradition. The land was once plunged into a civil war, were shinobis with kekkei genkai users were used to fight. The war caused the civilians to fear anyone born with kekkei genkai. The leader of the land is called the water lord and it shinobi village is called the hidden mist village.</span>
+                                </p>
+            </div>
+        </div>
+
+        </div>
+
+
+  <!-- the hidden village-->
+        <div id="forCharacterRemoval2" class="secondpage">
+            <div class="hiddenvillagewrap">
+            <p class="hiddenvillagep">
+                <img src="..\00symbol\waterhiddenvillage.png" style="width: 42px;">The hidden mist village is located within the land of water and his surrounded by very thick fog which offers natural protection for the village, This is home to the land of water's shinobis. The village doesn't interfer with the land of water matters. The leader of the village is called the mizukage and the village is at it <a href="#../character/chojuro.html">6th Mizukage</a>.  The hidden mist was once refered to as the bloody mist village, during the <a href="#../character/karatachi kagura">4th mizukage</a>'s inhuman rule, their was alot of blood shed, an example making guenin kill their classmates to pass the graduation exams. Today the village has great infrastructure and enjoys peace.</span>
+            </p>
+        </div>
+
+        </div>
+
+
+        <!-- clan image display -->
+        <div id="forCharacterRemoval3" class="thirdpage1">
+            <div class="thirdpageline"></div>
+            <div class="thirdpagetitle">
+                <p>Clans in The Mist</p>
+            </div> 
+
+            <div class="landDIV" id="landdiv">
+                <button class="clansbutton"  title="CHINOIKE">Chinoike</button>
+                <button class="clansbutton"  title="HOZUKI">Hozuki</button>
+                <button class="clansbutton"  title="HOSHIGAKI">Hoshigaki</button>
+                <button class="clansbutton"  title="YUKI">Yuki</button>
+                <button class="clansbutton"  title="KARATACHI">Karatachi</button>
+                </div>
+
+            <div class="slideimage">
+            <div class="slideimages" style="background-image:url('../clandisplay/karatachi.webp');" >
+                <p class="slideimagename">
+                    <span class="clanname"><a href="../clan/karatachi.html">Karatachi Clan</a></span>
+                </p>
+            </div>
+            <div class="slideimages" style="background-image:url('../clandisplay/yuki.webp');" >
+                <p class="slideimagename">
+                    <span class="clanname"><a href="../clan/yuki.html">Yuki Clan</a></span>
+                </p>
+            </div>
+            <div class="slideimages" style="background-image:url('../clandisplay/hoshigaki.webp');" >
+                <p class="slideimagename">
+                    <span class="clanname"><a href="../clan/hoshigaki.html">Hoshigaki Clan</a></span>
+                </p>
+            </div>
+            <div class="slideimages" style="background-image:url('../clandisplay/hozuki.webp');" >
+                <p class="slideimagename">
+                    <span class="clanname"><a href="../clan/hozuki.html">Hozuki Clan</a></span>
+                </p>
+            </div>
+            <div class="slideimages" style="background-image:url('../clandisplay/chinoike.webp');" >
+                <p class="slideimagename">
+                    <span class="clanname"><a href="../clan/chinoike.html">Chinoike Clan</a></span>
+                    </p>
+</div>
+
+<div class="handcontainer">
+<img class="handpointed" src="..\00symbol\pointer.png"/>
+</div>
+
+</div>
+
+</div>
+
+        <!-- footer -->
+        <div id="forCharacterRemoval4"  class="footer">
+<div class="footercontent">
+            <div class="pcontainer">
+                <p>
+                I can creat a simple website like this and send the codes to you. I can help you with image editing and video subtitling.
+            </p>
+            </div>
+        
+                <div class="icon" >
+                <a href="https://www.upwork.com/freelancers/~01cedb747c8d25be81"><img src="..\00symbol/upwork.png"></a>
+                <a href="https://www.peopleperhour.com/freelancer/design/bastou-adedeji-photo-editing-web-design-zanyxnqy"><img src="..\00symbol/peopleperhour.png"></a>
+                </div>
+                
+                <div class="footercopyright">
+                  <hr>
+                <p >@ all right reserved to the author Basade</p>
+        </div>
+           </div>
+           </div>
+<script src="../0cssJava/loaderDotAnimation.js"></script>
+<script src="..\0cssJava\test.js" defer></script>
+</body>
+
+</html>

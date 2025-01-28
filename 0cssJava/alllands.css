@@ -1,3 +1,4 @@
+
 ::-webkit-scrollbar{
     background-color: rgba(216, 213, 213, 0.74);
     border-radius: 18px;
@@ -5,8 +6,6 @@
   }
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgb(0, 0, 0);
-  
-  
   }
    
   
@@ -22,17 +21,6 @@
   }
 
 
-  .filteroverlay{
-     position: fixed;
-     background-color: rgba(0, 0, 0, 0.822);
-     top:0px;
-     right:0px;
-     width:100vw;
-     height: 100vh;
-     z-index: 45;
-     pointer-events: none;
-     display: none
- }
 
         html,body {
             margin: 0px;
@@ -75,7 +63,7 @@
     width:100%;
     height: 63px;
     max-height:fit-content;
-    background-color: rgba(255, 255, 255, 0.37);
+    background-color: rgba(255, 255, 255, 0.67);
     z-index: 6;
 }
 
@@ -177,7 +165,7 @@
     width: 234px;
     height:50px;
     border-radius: 10px 10px 10px 10px;
-    background-color: rgba(255, 255, 255, 0.37);
+    background-color: rgba(255, 255, 255, 0.67);
 }
 
 
@@ -232,10 +220,11 @@ right:0px;
     width: fit-content; 
 }
 
+
 #characterlistAOcontainer{
   position: sticky;
   top:75px;
-      z-index:82;
+  z-index:82;
   cursor:pointer;
   background-color: rgba(107, 107, 103, 0);
   background-image: url("../land/iconcharacter.png");
@@ -247,22 +236,35 @@ right:0px;
   /* float: right; */
 }
 
-/* .characterlistO{
-
-} */
-
-
-.characterposition{
+#verifiedIf:checked ~ .characterposition{
+    right:0px;
+  }
+  
+  #verifiedIf:checked ~ .filteroverlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.822);
+    transition: 0.65s;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height: 100%;
+    z-index: 45;
+    pointer-events: none;
+    transition: 0.75s ;
+  
+  }
+  
+  
+  .characterposition{
   position: fixed;
   background-color: #960a0a;
   top:0px;
   right:0px;
   height: 100%;
   z-index: 85;
-  transform:translateX(104%);
-  display: none;
-
-}
+  right:-100%;
+  transition: 0.75s;
+  }
 
 
 
@@ -280,52 +282,55 @@ right:0px;
 
 
 
-.characterlistA{
-  top:85px; 
-  position:fixed;
-  z-index: 1; 
-  right: 22px; 
-  font-family:serif; 
-  text-decoration: none; 
-  color:yellow;
-  width:40px; 
-  height: 35px;
-  text-align: center;  
-  border-radius: 50%; 
-  opacity:50%; 
-  background-color: red;
-}
 
 .characterlistA:hover{
-  transition-duration:0.21s;
-  cursor:pointer;
-  opacity: 100%;
-}
-
-
-.titlecharacterlist{
-  position: fixed;
-  background-color:white;
-  color:darkblue;
-  display: flex;
-  
-  border:0px;
-  box-shadow:0px 0px 4px black;
-  height:50px;
-  width:100%;
-  z-index: 2;
-}
-
-.titlecharacterlist h3{
-    margin: auto;
-    font-family: fonttest9;
-    font-size: 18px;
-
-}
-
-/* .titlecharacterlist::-webkit-scrollbar-track{
- height: 15px;
-} */
+    transition-duration:0.41s;
+    cursor:pointer;
+    opacity: 100%;
+    }
+    
+    
+    .titlecharacterlist{
+    position: fixed;
+    background-color:white;
+    color:darkblue;
+    display: flex;
+    border:0px;
+    box-shadow:0px 0px 4px black;
+    height:50px;
+    width:418px;
+    z-index: 2;
+    }
+    
+    .titlecharacterlist h3{
+      margin: auto;
+      /* margin-left:28px ; */
+      font-family: fonttest9;
+      font-size: 18px;
+    
+    
+    }
+    .characterlistA{
+     position: relative;
+     right:10px;
+      z-index: 12; 
+     top:10px;
+      font-family:serif; 
+      text-decoration: none; 
+      width:30px; 
+      height: 30px;
+      text-align: center;  
+      border-radius: 50%; 
+      border: 0.5px solid rgba(119, 100, 100, 0.61) ;
+      opacity:60%; 
+      }
+    
+      .characterlistA h1{
+       margin: auto;
+       font-size:23px;
+       margin-top: 2px;
+       font-family: sans-serif;
+      }
 
 
 .listofcharacterwrap{
@@ -758,7 +763,8 @@ background-color: rgb(255, 145, 0); position:relative; width:50%; top:25%; heigh
                    width: 10px;
                 }
 
-                .characterposition{
+
+                .characterposition, .titlecharacterlist{
                     width: 100%;
                 }
 

@@ -24,12 +24,13 @@ document.getElementsByClassName('hiddenvillagep')[0].style.scrollbarWidth="thin"
 
 
 let iframecover= document.getElementsByClassName("iframeCover")[0];
+
 let overlay= document.getElementsByClassName("filteroverlay")[0];
 
 let buttono= document.getElementById('characterlistAOcontainer');
 buttono.onclick= displaychatacterListO;
 
-let buttonc= document.getElementById('characterlistAC');
+let buttonc= document.getElementsByClassName("characterlistA")[0];
 buttonc.onclick= displaychatacterListC;
 
 
@@ -45,62 +46,34 @@ function handgone(){
   hand.style.display='none';
 }}
 
-let characterlist=document.getElementsByClassName("characterposition")[0];
-let pos;
-
 
 function displaychatacterListO(){
-  overlay.style.display= "flex";
-  iframecover.style.display="flex";
-  characterlist.style.display= "flex";
-  pos=104;
+  iframecover.style.display="block";
+  buttono.style.display="none";
+ }
+ 
+ 
+ for(let i=0; i<6; i++){
+   document.getElementById('forCharacterRemoval'+i).onclick=displaychatacterListC;
+   document.getElementById('forCharacterRemoval'+i).onclick=unckeck;
+ 
+ }
+ 
+ 
+  function displaychatacterListC(){
 
-  out();
-
-
-  function out(){
-
-if(pos==0){
-  window.cancelAnimationFrame(out);
-}else{
-  pos-=8;
-  characterlist.style.transform="translateX("+pos+"%)";
-  window.requestAnimationFrame(out);
-}
-characterlist.style.display= "block";
-}
-
-}
-
-
-for(let i=0; i<6; i++){
-  document.getElementById('forCharacterRemoval'+i).onclick=displaychatacterListC;
-}
-
-
-function displaychatacterListC(){
-  overlay.style.display= "none";
   iframecover.style.display="none";
-  let posin=pos;
-
-  into();
-function into(){
-
-if(posin==104){
-cancelAnimationFrame(into);
-characterlist.style.display= "none";
-}else{
-posin+=8;
-characterlist.style.transform="translateX("+posin+"%)";
-requestAnimationFrame(into);
-  }
+   buttono.style.display="block";
 
  }
+ 
+ function unckeck(){
+  iframecover.style.display="none";
+  buttono.style.display="block";
+   document.getElementById("verifiedIf").checked=false;
+ }
 
-}
-
-
-
+ 
 
 
 let clansbutton = document.getElementsByClassName('clansbutton');

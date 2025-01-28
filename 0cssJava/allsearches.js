@@ -311,7 +311,7 @@ for(let e=0; e<datalis.length; e++){
 
     if(searchvalue==result){
     //   alert(top.window.location = inlocations+searchvalue+index);  
-        top.window.location = inlocations+searchvalue+index;
+        top.window.location = inlocations+searchvalue.replaceAll(' ','-')+index;
         
         }else if(searchvalue==""){
 
